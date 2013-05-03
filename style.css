@@ -18,6 +18,10 @@ box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 border-top: 1px solid #fafafa;
 border-bottom: 1px solid #eee;
 background: linear-gradient(to bottom, #f9f9f9, #e3e3e3);
+background: -webkit-linear-gradient(to bottom, #f9f9f9, #e3e3e3);
+background: -o-linear-gradient(to bottom, #f9f9f9, #e3e3e3);
+background: -ms-linear-gradient(to bottom, #f9f9f9, #e3e3e3);
+background: -moz-linear-gradient(to bottom, #f9f9f9, #e3e3e3);
 margin-top:-90px;
 }
 
@@ -27,7 +31,7 @@ margin-top:-90px;
 	height:80px;
 	margin:0 auto;
 	position:relative;
-	z-index:10000;
+	z-index:100;
 	padding-top:10px;
 	
 	
@@ -57,18 +61,64 @@ margin-top:-90px;
 
 #main-nav li {
 	
+	
+	display:inline;
+	padding-top:30px;
+	padding-bottom:30px;
+	padding-left:15px;
+	padding-right:15px;
+	
+	}
+	
+#main-nav a {
+	font-weight:300;
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-size:22px;
 	color:white;
-	display:inline;
-	padding-right:35px;
-	font-weight:300;
+	text-decoration:none;
 }
 
+#main-nav ul ul {
+	display:none;
+	padding:10px 20px 20px 10px;
+}
+
+/*Hover across main navigation element to reveal content box */
+#main-nav ul li:hover ul {
+	height:305px;
+	background: -webkit-linear-gradient(top, #F9D423, #facf23);
+    background: -moz-linear-gradient(top, #F9D423, #facf23);
+    background: -o-linear-gradient(top, #F9D423, #facf23);
+    background: -ms-linear-gradient(top, #F9D423, #facf23);
+    background: linear-gradient(top, #F9D423, #facf23);
+    border-left: 2px solid rgba(244,182,46,0.59);
+    border-right: 2px solid rgba(244,182,46,0.59);
+	width:866px;
+	display:block;
+	position:absolute;
+	z-index:100000;
+	margin-top:25px;
+
+}
+
+/*Hover elements of the navigation element only */
+#main-nav ul li.parent:hover {
+	background: #F9D423;
+    -webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    -ms-box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    -o-box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    border-left: 2px solid rgba(244,182,46,0.59);
+    border-right: 2px solid rgba(244,182,46,0.59);
+    text-color:black;
+}
+
+	
 #canvas {
 	width:900px;
 	height:1000px;
-	z-index:100000;
+	z-index:1000;
 	margin:0 auto;
 	background:white;
 	position:relative;
@@ -102,6 +152,7 @@ margin-top:-90px;
     color:rgba(0,0,0);
     text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
     display:inline;
+    margin-left:10px;
 }
 
 h1 {
